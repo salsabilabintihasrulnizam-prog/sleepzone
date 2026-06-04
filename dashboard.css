@@ -1475,16 +1475,15 @@
 
 @media (max-width: 900px) {
 
-  /* ── Bar chart ── */
   .trend-chart {
     grid-template-columns: 28px 1fr 28px;
     gap: 4px;
-    min-height: unset;       /* remove fixed 320px */
+    min-height: unset;
   }
 
   .chart-content {
-    height: 180px;           /* shorter on mobile */
-    overflow: visible;       /* let dates show below */
+    height: 180px;
+    overflow: visible;
   }
 
   .y-axis-left,
@@ -1505,22 +1504,14 @@
   }
 
   .chart-dates {
-    width: 100%;             /* was 95.7% — hardcoded */
-    padding-left: 0;         /* was 19px — hardcoded */
-    margin-bottom: 0;
-    font-size: 10px;         /* smaller dates on mobile */
-  }
-
-  /* ── Ambience card image ── */
-  .ambience-card a {
-    display: block;          /* img inside <a> needs this */
-    overflow: hidden;
-  }
-
-  .ambience-card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
+    padding-left: 0;
+    padding-top: 8px;
+    margin-bottom: 0;   
+    font-size: 10px;
+  }
+
+  .chart-legend {
+    margin-top: 30px;    
   }
 }
