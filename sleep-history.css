@@ -1185,7 +1185,6 @@
 
 @media (max-width: 900px) {
 
-
   /* TAB BAR */
   .tab-bar {
     max-width: 100%;
@@ -1198,7 +1197,30 @@
     font-size: 13px;
   }
 
-  /* existing — keep as is */
+  /* NOTES WINDOW */
+  .notes-window {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0 15px;
+  }
+
+  /* NOTES CARD */
+  .notes-card {
+    overflow: hidden;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    border-radius: 0 20px 20px 20px;
+  }
+
+  /* HISTORY PAGE */
+  #historyPage {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  /* TABLE */
   .table-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -1216,22 +1238,7 @@
     white-space: nowrap;
   }
 
-  .notes-card {
-    overflow: hidden;
-    width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-       border-radius: 0 20px 20px 20px;
-  }
-
-  .notes-window {
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-
-
-
+  /* HEADER */
   .page-header {
     flex-direction: column;
     gap: 15px;
@@ -1242,6 +1249,7 @@
     font-size: 24px;
   }
 
+  /* INSIGHTS */
   .insights-grid {
     grid-template-columns: 1fr;
   }
@@ -1264,8 +1272,10 @@
     padding: 10px 14px;
   }
 
+  /* FOOTER */
   .footer-content {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
 }
