@@ -1471,3 +1471,34 @@
     min-width: 0;
   }
 }
+
+
+@media (max-width: 900px) {
+
+  .trend-chart {
+    grid-template-columns: 28px 1fr 28px;
+    gap: 4px;
+  }
+
+  .chart-bars {
+    gap: 5px;
+    padding: 0 2px;
+  }
+
+  .bar {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+  }
+
+  .chart-dates {
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .y-axis-left,
+  .y-axis-right {
+    font-size: 10px;
+  }
+}
