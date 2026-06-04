@@ -1472,6 +1472,7 @@
   .footer-content {
     grid-template-columns: 1fr;
     min-width: 0;
+     gap: 15px;
   }
 
   .footer-section {
