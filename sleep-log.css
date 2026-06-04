@@ -1122,3 +1122,57 @@
 .slider-values span:nth-child(3){ left:50%; }
 .slider-values span:nth-child(4){ left:74.5%; }
 .slider-values span:nth-child(5){ left:96%; }
+
+
+@media (max-width: 900px) {
+
+  /* Container */
+  .sleep-log-container {
+    width: 95%;
+    padding: 25px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    min-width: 0;
+  }
+
+  /* Header */
+  .sleep-log-header h2 {
+    font-size: 28px;
+  }
+
+  /* Time row */
+  .time-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Input groups */
+  .glass-input-group {
+    margin-bottom: 40px;  /* reduce desktop 70px */
+  }
+
+  /* Option buttons */
+  .option-grid {
+    gap: 10px;
+  }
+
+  .option-btn {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  /* Slider labels */
+  .slider-values span {
+    font-size: 10px;
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    min-width: 0;
+    gap: 20px;
+  }
+
+  .footer-section {
+    min-width: 0;
+  }
+}
