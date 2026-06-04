@@ -602,3 +602,54 @@
     background: linear-gradient(135deg,#7a5cff,#4ec8ff);
     cursor: pointer;
 }
+
+
+@media (max-width: 900px) {
+
+  /* Profile */
+  .profile-container {
+    width: 95%;
+    margin: 30px auto;
+  }
+
+  .profile-card {
+    padding: 25px;
+  }
+
+  .profile-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .profile-avatar-emoji {
+    width: 120px;
+    height: 120px;
+    font-size: 65px;
+  }
+
+  .profile-info h2 {
+    font-size: 24px;
+  }
+
+  .profile-info p {
+    font-size: 15px;
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    min-width: 0;
+    gap: 20px;
+  }
+
+  .footer-section {
+    min-width: 0;
+  }
+}
