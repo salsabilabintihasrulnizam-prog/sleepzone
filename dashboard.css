@@ -1489,7 +1489,9 @@
 
   .chart-content {
     height: 180px;           
-    overflow: visible;      
+    overflow: visible; 
+         transform: scaleX(1.15);    
+    transform-origin: left;  
   }
 
   .y-axis-left,
@@ -1513,7 +1515,10 @@
     width: 100%;            
     padding-left: 0;       
     margin-bottom: -24px;
-    font-size: 10px;         
+    font-size: 10px;  
+
+      transform: scaleX(1.15);     
+    transform-origin: left;  
   }
 
   /* ── Ambience card image ── */
