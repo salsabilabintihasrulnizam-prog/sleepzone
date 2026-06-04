@@ -502,29 +502,27 @@
 
 .notes-window{
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:24px;
-
-    width:100%;
-}
-
-.notes-window {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 0px;
+    width: 100%;
+    padding: 40px 0;
 }
 
 .tab-bar {
     display: flex;
     align-items: flex-end;
-    gap: 6px;
-    align-self: flex-start;
+   
     margin-left: calc((100% - 1000px) / 2); 
     padding-left: 0;
+
+        width: 100%;
+    max-width: 1000px;  
+ 
+    align-items: flex-end;
+    gap: 6px;
 }
 
 .tab-btn {
