@@ -1039,17 +1039,21 @@
 
 @media (max-width: 768px) {
   .profile-dropdown {
-    background: #1e1a2e;   /* solid dark purple, no transparency */
+    background: #1e1a2e;  
     backdrop-filter: none;
   }
 }
 
 @media (max-width: 768px) {
-  .profile-icon:focus + .profile-dropdown,
-  .profile-icon:focus-within + .profile-dropdown {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+  .profile-wrapper:hover .profile-dropdown {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .profile-dropdown.dropdown-open {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
   }
 }
 
