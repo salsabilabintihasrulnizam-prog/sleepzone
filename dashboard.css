@@ -1044,6 +1044,15 @@
   }
 }
 
+@media (max-width: 768px) {
+  .profile-icon:focus + .profile-dropdown,
+  .profile-icon:focus-within + .profile-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
 /* =========================================
    AMBIENCE SECTION
 ========================================= */
