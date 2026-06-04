@@ -55,69 +55,47 @@
         </div>
 
     </nav>
-                <section class="notes-window">
 
-        <!-- LEFT PAGE ARROW -->
-        <button id="pagePrev" class="page-arrow">
-            ←
-        </button>
 
-        <!-- CONTENT -->
-        <div class="notes-card">
+    <section class="notes-window">
 
-            <div id="historyPage">
+    <!-- BOOKMARK TABS -->
+        
+    <div class="tab-bar">
+        <button id="pagePrev" class="tab-btn tab-active">History</button>
+        <button id="pageNext" class="tab-btn">Insights</button>
+    </div>
 
-                <div class="page-header">
+    <!-- CONTENT -->
+    <div class="notes-card">
 
-                    <h2>Sleep History</h2>
-
-                    <div class="month-selector">
-
-                        <button id="monthPrev">‹</button>
-
-                        <span id="monthLabel"></span>
-
-                        <button id="monthNext">›</button>
-
-                    </div>
-
+        <div id="historyPage">
+            <div class="page-header">
+                <h2>Sleep History</h2>
+                <div class="month-selector">
+                    <button id="monthPrev">‹</button>
+                    <span id="monthLabel"></span>
+                    <button id="monthNext">›</button>
                 </div>
-
-                <div id="historyContent"></div>
-
             </div>
-
-            <div id="notesPage" style="display:none;">
-
-                <div class="page-header">
-                    <h2>Insights</h2>
-                </div>
-
-
-
-                        <div class="date-selector">
-
-            <button id="insightPrev">
-                &#10094;
-            </button>
-
-            <span id="insightDateLabel"></span>
-
-            <button id="insightNext">
-                &#10095;
-            </button>
-
-        </div>
-                    <div id="insightsGrid"></div>
-            </div>
-
+            <div id="historyContent"></div>
         </div>
 
-        <button id="pageNext" class="page-arrow">
-            →
-        </button>
+        <div id="notesPage" style="display:none;">
+            <div class="page-header">
+                <h2>Insights</h2>
+            </div>
+            <div class="date-selector">
+                <button id="insightPrev">&#10094;</button>
+                <span id="insightDateLabel"></span>
+                <button id="insightNext">&#10095;</button>
+            </div>
+            <div id="insightsGrid"></div>
+        </div>
 
-    </section>
+    </div> 
+
+</section> 
 
 
 
