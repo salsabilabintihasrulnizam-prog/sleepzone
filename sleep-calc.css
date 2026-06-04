@@ -693,3 +693,35 @@
     font-size:2rem;
     margin:8px 0;
 }
+
+@media (max-width: 900px) {
+
+  /* Calculator */
+  .calculator-card {
+    width: 95%;
+    padding: 25px;
+    margin: 20px auto;
+  }
+
+  .toggle-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .result-table th,
+  .result-table td {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    min-width: 0;
+    gap: 20px;
+  }
+
+  .footer-section {
+    min-width: 0;
+  }
+}
