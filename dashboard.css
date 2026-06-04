@@ -1495,6 +1495,8 @@
   .chart-bars {
     gap: 4px;
     padding: 0 2px;
+      .chart-bars {
+    margin-top: 20px; 
   }
 
   .bar {
@@ -1509,6 +1511,9 @@
     padding-top: 8px;
     margin-bottom: 0;   
     font-size: 10px;
+     
+  .chart-dates {
+    margin-top: 20px; 
   }
 
   .chart-legend {
