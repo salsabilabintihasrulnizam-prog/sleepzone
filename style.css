@@ -365,3 +365,15 @@ h1{
 
 
 
+@media (max-width: 900px) {
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    min-width: 0;
+    gap: 20px;
+  }
+
+  .footer-section {
+    min-width: 0;
+  }
+}
