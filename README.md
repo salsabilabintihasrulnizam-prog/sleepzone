@@ -28,6 +28,9 @@ b. Features Included
   * Average sleep duration
   * Sleep quality score
   * Weekly sleep duration chart
+  * Average sleep duration is calculated based on recorded sleep logs
+  * Charts will not appear if no sleep records have been added yet
+
 * Sleep ambience section with embedded YouTube videos for relaxation
 * Sleep tips section to improve sleep habits and quality
 
