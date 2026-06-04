@@ -1459,6 +1459,11 @@
     width: 100%;
     min-width: 0;    
     box-sizing: border-box;
+     padding: 20px 12px; 
+  }
+
+.metric-card {
+    padding: 20px 12px;  /* was 28px */
   }
 
   /* Footer */
