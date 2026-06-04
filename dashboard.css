@@ -1479,11 +1479,11 @@
     grid-template-columns: 28px 1fr 28px;
     gap: 4px;
     min-height: unset;
+    align-items: end;
   }
 
   .chart-content {
     height: 180px;
-    overflow: visible;
   }
 
   .y-axis-left,
@@ -1495,8 +1495,6 @@
   .chart-bars {
     gap: 4px;
     padding: 0 2px;
-      .chart-bars {
-    margin-top: 20px; 
   }
 
   .bar {
@@ -1506,14 +1504,14 @@
   }
 
   .chart-dates {
-    margin-top: 20px; 
-    margin-bottom: -24px;
-    padding-left: 2px;     
     width: 100%;
+    padding-left: 2px;   
+    padding-top: 8px;
+    margin-bottom: -24px;  
     font-size: 10px;
   }
 
   .chart-legend {
-    margin-top: 30px;    
+    margin-top: 30px;
   }
 }
