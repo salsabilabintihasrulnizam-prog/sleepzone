@@ -1429,3 +1429,35 @@
 
     font-size:14px;
 }
+
+
+@media (max-width: 900px) {
+
+    .hero-section {
+        grid-template-columns: 1fr;
+        padding: 25px 20px 40px;
+        gap: 25px;
+        min-height: auto;
+    }
+
+    .hero-left {
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-right {
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .cta-card {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+    }
+}
