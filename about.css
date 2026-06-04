@@ -753,3 +753,85 @@
 .why-title {
     text-align: right;
 }
+
+
+
+@media (max-width: 900px) {
+
+  /* Container */
+  .about-container {
+    width: 95%;
+    margin: 20px auto;
+    gap: 20px;
+  }
+
+  /* Card */
+  .about-card {
+    padding: 25px;
+  }
+
+  /* Row */
+  .about-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  /* Image */
+  .about-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Text */
+  .about-text {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .about-text p {
+    text-align: left;
+  }
+
+  /* Titles */
+  .about-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: left;   /* reset desktop right-align */
+  }
+
+  /* Features */
+  .feature-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  /* Quote */
+  .quote-box {
+    font-size: 17px;
+    padding: 18px;
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    min-width: 0;
+    gap: 20px;
+  }
+
+  .footer-section {
+    min-width: 0;
+  }
+}
