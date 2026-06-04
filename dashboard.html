@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>SleepZone Home</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard-page">
+
+    <!-- Background Overlay -->
+    <div class="background-overlay"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar-custom">
+
+        <!-- Left -->
+        <div class="nav-left">
+            <img src="logo.png" alt="logo" class="logo">
+            <span class="logo-text">SLEEPZONE</span>
+        </div>
+
+        <!-- Center -->
+ <div class="nav-center">
+    <a href="dashboard.html">Home</a>
+    <a href="sleep-log.html">Sleep Log</a>
+    <a href="sleep-history.html">Sleep History</a>
+    <a href="sleep-calc.html">Sleep Calculator</a>
+    <a href="about.html">About</a>
+</div>
+
+        <!-- Right -->
+        <div class="profile-wrapper">
+
+            <div class="profile-icon">
+                ☾
+            </div>
+
+            <!-- Dropdown -->
+            <div class="profile-dropdown">
+                <a href="profile.html">Profile</a>
+                <a href="index.html">Log Out</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+
+        <!-- LEFT -->
+        <div class="hero-left">
+
+            <p class="welcome-text" id="welcomeText">
+                Welcome
+            </p>
+
+            <h1>
+                Simplify Your Sleep,
+                Restore Your Life.
+            </h1>
+
+            <p class="hero-description">
+            SleepZone helps you track your sleep patterns, understand your sleep quality, 
+            and build healthier habits through simple and visual sleep insights. 
+            Monitor your daily logs, weekly trends, and progress toward better rest.
+            </p>
+
+
+
+
+<!-- CTA CARD -->
+<div class="cta-card">
+
+    <h3>Not sure when to sleep or wake up?</h3>
+
+     <div class="cta-image">
+        <img src="clock.jpg" alt="Sleep Calculator Preview">
+    </div>
+
+    <p> 
+        Use our smart calculator based on your age and sleep needs.
+    </p>
+
+
+    <button onclick="location.href='sleep-calc.html'">
+        Calculate Your Sleep
+    </button>
+
+</div>
+
+        </div>
+
+
+
+
+
+
+
+        <!-- RIGHT -->
+        <div class="hero-right">
+
+            <div class="dashboard-panel">
+
+
+              <div id="emptyState" class="empty-state">
+    <h2>No Sleep Data Yet</h2>
+    <p>Start tracking your sleep by logging your first night.</p>
+
+    <button onclick="goToSleepLog()" class="btn-go">
+        Go to Sleep Log
+    </button>
+</div>
+
+<div id="dashboardContent">
+
+  <!-- TOP GRID -->
+<div class="metrics-grid">
+
+    <!-- CARD 1 -->
+    <div class="metric-card sleep-hours-card">
+
+        <div class="card-top">
+
+            <h3>Average Sleep Hours</h3>
+
+    
+
+        </div>
+
+        <div class="sleep-stat" id="averageSleep">
+
+        </div>
+
+        <p class="metric-subtitle">
+            Average Sleep Duration (Last 7 Days)
+        </p>
+
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="metric-card donut-card">
+
+        <h3>Sleep Quality</h3>
+
+        <div class="donut-wrapper">
+
+            <!-- DONUT -->
+            <div class="donut-chart">
+
+                <div class="donut-inner">
+
+                    <h2 id="sleepScore"></h2>
+
+                    <span>SCORE</span>
+
+                </div>
+
+            </div>
+
+            <!-- LEGEND -->
+                <div class="legend-item">
+                <span class="dot excellent"></span>
+                Excellent:
+                <span id="excellentCount">0</span>
+            </div>
+
+            <div class="legend-item">
+                <span class="dot average"></span>
+                Average:
+                <span id="averageCount">0</span>
+            </div>
+
+            <div class="legend-item">
+                <span class="dot poor"></span>
+                Poor:
+                <span id="poorCount">0</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- BOTTOM CARD -->
+<div class="metric-card trend-card">
+
+    <div class="trend-header">
+
+        <h3>7-Day Sleep Duration</h3>
+
+    </div>
+
+    <!-- CHART AREA -->
+    <div class="trend-chart">
+
+        <!-- Y AXIS LEFT -->
+        <div class="y-axis-left">
+            <span>12h</span>
+            <span>9h</span>
+            <span>6h</span>
+            <span>3h</span>
+            <span>0h</span>
+        </div>
+
+        <div class="chart-content">
+
+
+ <div class="chart-bars" id="chartBars"></div>
+<div class="chart-dates" id="chartDates"></div>
+
+
+</div>
+
+        <!-- RIGHT AXIS -->
+        <div class="y-axis-right">
+            <span>100</span>
+            <span>80</span>
+            <span>60</span>
+            <span>40</span>
+            <span>0</span>
+        </div>
+
+    </div>
+
+    <!-- LEGEND -->
+    <div class="chart-legend">
+
+
+        <div class="legend-box">
+            <span class="legend-purple"></span>
+            Total Sleep Hours
+        </div>
+
+    </div>
+
+</div>
+    
+</div>
+
+
+
+
+    </section>
+
+    <!-- =========================================
+     SLEEP AMBIENCE
+========================================= -->
+
+<section class="ambience-section">
+
+    <div class="ambience-header">
+
+        <h2>Sleep Ambience</h2>
+
+        <p>
+            Relaxing sounds designed to help you unwind,
+            reduce stress, and improve sleep quality.
+        </p>
+
+    </div>
+
+    <div class="ambience-grid">
+
+        <!-- CARD 1 -->
+        <div class="ambience-card">
+
+            <a href="https://m.youtube.com/watch?v=8vhbTdWqXgU&pp=ygUSYW1iaWFuY2UgZm9yIHNsZWVw&ra=m " target="_blank">
+
+          
+                    <img
+                        src="https://img.youtube.com/vi/8vhbTdWqXgU/maxresdefault.jpg"
+                        alt="Rain Sound"
+                    >
+
+            </a>
+
+            <h3>Rain Sound On Window</h3>
+
+            <p>
+                Gentle rainfall and distant thunder create
+                a calming atmosphere that helps reduce stress
+                before sleep.
+            </p>
+
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="ambience-card">
+
+            <a href="https://m.youtube.com/watch?v=bn9F19Hi1Lk&pp=ygUZYW1iaWFuY2Ugc2xlZXAgc291bmQgd2F2ZQ%3D%3D&ra=m" target="_blank">
+
+        
+                            <img
+                                src="https://img.youtube.com/vi/bn9F19Hi1Lk/maxresdefault.jpg"
+                                alt="Ocean Waves"
+                            >
+
+            </a>
+
+            <h3>Relaxing Wave Sounds At Night</h3>
+
+            <p>
+                Soft ocean waves and low frequency sounds
+                designed for deep relaxation and better sleep.
+            </p>
+
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="ambience-card">
+
+            <a href="https://m.youtube.com/watch?v=E77jmtut1Zc&pp=ygUeYW1iaWFuY2Ugc2xlZXAgY3JpY2tldHMgZm9yZXN0&ra=m
+            " target="_blank">
+
+               
+                                    <img
+                        src="https://img.youtube.com/vi/E77jmtut1Zc/hqdefault.jpg"
+                        alt="Forest Night Ambience"
+                    >
+
+            </a>
+
+            <h3>Forest Night Ambience</h3>
+
+            <p>
+                Peaceful campfire, crickets, gentle wind, and natural
+                forest sounds for a calm bedtime environment.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     SLEEP TIPS
+========================================= -->
+
+<section class="tips-section">
+
+    <div class="tips-header">
+
+        <h2>Sleep Tips</h2>
+
+        <p>
+            Small habits can make a big difference in sleep quality,
+            energy levels, and overall well-being.
+        </p>
+
+    </div>
+
+    <div class="tips-grid">
+
+        <div class="tip-card">
+            <div class="tip-icon">🌙</div>
+
+            <h3>Follow a Consistent Sleep Routine</h3>
+
+            <p>
+                Try to go to bed and wake up at the same time every day,
+                including weekends. A regular schedule helps your body
+                maintain a healthy sleep pattern.
+            </p>
+        </div>
+
+        <div class="tip-card">
+            <div class="tip-icon">🏃</div>
+
+            <h3>Stay Active During the Day</h3>
+
+            <p>
+                Regular physical activity can improve sleep quality.
+                Avoid intense workouts too close to bedtime as they may
+                make it harder to fall asleep.
+            </p>
+        </div>
+
+        <div class="tip-card">
+            <div class="tip-icon">☕</div>
+
+            <h3>Reduce Stimulants Before Bed</h3>
+
+            <p>
+                Limit caffeine and nicotine, especially in the afternoon
+                and evening, since they can keep your mind and body alert
+                when you should be winding down.
+            </p>
+        </div>
+
+        <div class="tip-card">
+            <div class="tip-icon">📖</div>
+
+            <h3>Create a Relaxing Bedtime Routine</h3>
+
+            <p>
+                Spend some time unwinding before sleep through calming
+                activities such as reading, listening to soft music,
+                or taking a warm bath.
+            </p>
+        </div>
+
+        <div class="tip-card">
+            <div class="tip-icon">🛏️</div>
+
+            <h3>Make Your Bedroom Sleep-Friendly</h3>
+
+            <p>
+                Keep your sleeping environment cool, quiet, dark,
+                and comfortable. Minimize distractions from bright
+                lights and electronic devices.
+            </p>
+        </div>
+
+        <div class="tip-card">
+            <div class="tip-icon">☀️</div>
+
+            <h3>Get Enough Natural Light</h3>
+
+            <p>
+                Exposure to sunlight helps regulate your body's
+                internal clock, making it easier to stay alert
+                during the day and sleep well at night.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-section">
+
+            <h3>SleepZone</h3>
+
+            <p>
+                Helping you build healthier sleep habits,
+                one night at a time.
+            </p>
+
+        </div>
+
+        <div class="footer-section">
+
+            <h4>Quick Links</h4>
+
+            <a href="dashboard.html">Home</a>
+            <a href="sleep-log.html">Sleep Log</a>
+            <a href="sleep-history.html">Sleep History</a>
+              <a href="sleep-calc.html">Sleep Calculator </a>
+            <a href="about.html">About</a>
+
+        </div>
+
+        <div class="footer-section">
+
+            <h4>Contact</h4>
+
+            <a href="#">Contact Us</a>
+            <a href="#">Feedback</a>
+            <a href="#">Reach Us</a>
+
+        </div>
+
+        <div class="footer-section">
+
+            <h4>Follow Us</h4>
+
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">TikTok</a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 SleepZone. All rights reserved.
+    </div>
+
+</footer>
+
+
+    <!-- JS -->
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

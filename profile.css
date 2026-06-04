@@ -1,0 +1,604 @@
+.dashboard-page{
+
+    font-family:'Poppins', sans-serif;
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    rgba(8, 8, 25, 0.60),
+    rgba(8, 8, 25, 0.80)
+    ),
+    url("indexbg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    color:white;
+
+    overflow-x:hidden;
+
+    position:relative;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar-custom{
+
+    position:relative;
+    z-index:10;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:30px 70px;
+}
+
+/* LEFT */
+
+.nav-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+}
+
+.logo{
+
+    width:42px;
+    height:42px;
+}
+
+.logo-text{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    letter-spacing:5px;
+
+    color:white;
+}
+
+/* =========================================
+   CENTER GLASS NAVIGATION
+========================================= */
+
+.nav-center{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 22px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,0.06);
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+    0 8px 35px rgba(0,0,0,0.35);
+}
+
+/* NAV LINKS */
+
+.nav-center a{
+
+    position:relative;
+
+    text-decoration:none;
+
+    color:rgba(255,255,255,0.72);
+
+    font-size:15px;
+
+    font-weight:400;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    transition:0.35s ease;
+
+    background:transparent;
+}
+
+/* NEON HOVER EFFECT */
+
+.nav-center a:hover{
+
+    color:#e9d5ff;
+
+    text-shadow:
+    0 0 8px rgba(216,180,254,0.95),
+    0 0 20px rgba(124,58,237,0.85),
+    0 0 35px rgba(124,58,237,0.6);
+
+    background:rgba(255,255,255,0.05);
+
+    box-shadow:
+    0 0 18px rgba(124,58,237,0.28);
+}
+
+/* =========================================
+   PROFILE ICON
+========================================= */
+
+.profile-wrapper{
+    position:relative;
+}
+
+.profile-icon{
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:22px;
+
+    background:rgba(255,255,255,0.06);
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(16px);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+}
+
+.profile-icon:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 0 20px rgba(124,58,237,0.55);
+}
+
+/* =========================================
+   DROPDOWN
+========================================= */
+
+.profile-dropdown{
+
+    position:absolute;
+
+    top:68px;
+    right:0;
+
+    width:180px;
+
+    padding:12px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,0.07);
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(18px);
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(-10px);
+
+    transition:0.3s ease;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.35);
+}
+
+.profile-wrapper:hover .profile-dropdown{
+
+    opacity:1;
+    visibility:visible;
+
+    transform:translateY(0);
+}
+
+.profile-dropdown a{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:12px 14px;
+
+    border-radius:14px;
+
+    transition:0.3s ease;
+}
+
+.profile-dropdown a:hover{
+
+    background:rgba(255,255,255,0.08);
+
+    color:#d8b4fe;
+
+    box-shadow:
+    0 0 12px rgba(124,58,237,0.25);
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer{
+
+    margin-top:80px;
+
+    background:
+        rgba(255,255,255,0.04);
+
+    border-top:
+        1px solid rgba(255,255,255,0.10);
+
+    backdrop-filter:
+        blur(18px);
+
+    padding:50px 8% 25px;
+}
+
+.footer-content{
+
+    display:grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap:40px;
+}
+
+.footer-section h3{
+
+    color:white;
+
+    margin-bottom:15px;
+
+    font-size:24px;
+}
+
+.footer-section h4{
+
+    color:white;
+
+    margin-bottom:15px;
+
+    font-size:18px;
+}
+
+.footer-section p{
+
+    color:rgba(255,255,255,0.75);
+
+    line-height:1.8;
+}
+
+.footer-section a{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:rgba(255,255,255,0.7);
+
+    margin-bottom:10px;
+
+    transition:0.3s;
+}
+
+.footer-section a:hover{
+
+    color:#d8b4fe;
+
+    transform:
+        translateX(4px);
+}
+
+.footer-bottom{
+
+    margin-top:35px;
+
+    padding-top:20px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.08);
+
+    text-align:center;
+
+    color:rgba(255,255,255,0.55);
+
+    font-size:14px;
+}
+
+
+
+
+
+/* =========================================
+   NAVBAR BASE (DESKTOP)
+========================================= */
+
+.navbar-custom{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+
+    align-items: center;
+
+    padding: 25px 60px;
+
+    position: relative;
+    z-index: 10;
+}
+
+/* =========================================
+   LEFT SIDE (LOGO)
+========================================= */
+
+.nav-left{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    justify-self: start;
+}
+
+.logo{
+    width: 42px;
+    height: 42px;
+}
+
+.logo-text{
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: white;
+}
+
+/* =========================================
+   CENTER NAV
+========================================= */
+
+.nav-center{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 12px 20px;
+
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+
+    backdrop-filter: blur(18px);
+
+    justify-self: center;
+
+    flex-wrap: nowrap;
+}
+
+.nav-center a{
+    text-decoration: none;
+    color: rgba(255,255,255,0.7);
+
+    font-size: 14px;
+
+    padding: 8px 12px;
+
+    border-radius: 999px;
+
+    transition: 0.3s ease;
+}
+
+.nav-center a:hover{
+    color: white;
+    background: rgba(255,255,255,0.08);
+}
+
+/* =========================================
+   PROFILE ICON (RIGHT SIDE)
+========================================= */
+
+.profile-wrapper{
+    justify-self: end;
+    position: relative;
+}
+
+.profile-icon{
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+
+    cursor: pointer;
+
+    color: white;
+
+    transition: 0.3s ease;
+}
+
+.profile-icon:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(124,58,237,0.5);
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media(max-width: 768px){
+
+    .navbar-custom{
+        grid-template-columns: 1fr;
+        gap: 15px;
+
+        padding: 20px;
+
+        text-align: center;
+    }
+
+    .nav-left,
+    .nav-center,
+    .profile-wrapper{
+        justify-self: center;
+    }
+
+    .nav-center{
+        flex-wrap: wrap;
+        justify-content: center;
+
+        gap: 10px;
+
+        border-radius: 20px;
+    }
+}
+
+
+
+/* =========================
+   PROFILE PAGE
+========================= */
+
+.profile-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 60px auto;
+}
+
+.profile-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 30px;
+    padding: 40px;
+}
+
+/* TITLE */
+
+.profile-title {
+    color: white;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* HEADER */
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* EMOJI AVATAR */
+
+.profile-avatar-emoji {
+    width: 160px;
+    height: 160px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 90px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow: 0 0 25px rgba(119,87,255,0.3);
+}
+
+/* INFO */
+
+.profile-info {
+    color: white;
+}
+
+.profile-info h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+/* DIVIDER */
+
+.profile-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.12);
+    margin: 30px 0;
+}
+
+/* INPUTS */
+
+.glass-input-group {
+    margin-bottom: 20px;
+}
+
+.glass-input-group label {
+    color: white;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.glass-input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.08);
+    color: white;
+}
+
+/* BUTTON */
+
+.save-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    background: linear-gradient(135deg,#7a5cff,#4ec8ff);
+    cursor: pointer;
+}

@@ -1,0 +1,367 @@
+/* =========================================
+   LOGIN PAGE
+========================================= */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+  body{
+  font-family: 'Poppins', sans-serif;
+
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      rgba(8, 8, 25, 0.55),
+      rgba(8, 8, 25, 0.75)
+    ),
+    url("indexbg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+
+}
+
+
+.page-wrapper{
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 0;
+}
+/* background blur */
+
+.background-overlay{
+    position: absolute;
+    inset: 0;
+
+    backdrop-filter: blur(2px);
+}
+
+/* login glass card */
+
+.login-container{
+
+    position: relative;
+    z-index: 2;
+
+    width: 390px;
+    padding: 45px 40px;
+    border-radius: 28px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(16px);
+    box-shadow:
+    0 8px 40px rgba(0,0,0,0.4);
+    text-align: center;
+    color: white;
+    margin:auto;
+}
+
+/* moon icon */
+
+.moon-icon{
+    font-size: 32px;
+    margin-bottom: 18px;
+    color: rgba(255,255,255,0.9);
+}
+
+/* title */
+
+h1{
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 7px;
+
+    margin-bottom: 12px;
+}
+
+/* subtitle */
+
+.tagline{
+    font-size: 14px;
+
+    color: rgba(255,255,255,0.7);
+
+    margin-bottom: 30px;
+}
+
+/* inputs */
+
+.glass-input{
+
+    background: rgba(255,255,255,0.06) !important;
+
+    border: 1px solid rgba(255,255,255,0.12) !important;
+
+    color: white !important;
+
+    border-radius: 14px;
+
+    padding: 13px 15px;
+
+    margin-bottom: 18px;
+}
+
+.glass-input::placeholder{
+    color: rgba(255,255,255,0.55);
+}
+
+.glass-input:focus{
+
+    background: rgba(255,255,255,0.09) !important;
+
+    border-color: #8b5cf6 !important;
+
+    box-shadow: none !important;
+}
+
+/* login button */
+
+.login-btn{
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background:
+    linear-gradient(
+    to right,
+    #4338ca,
+    #7c3aed
+    );
+
+    color: white;
+
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.login-btn:hover{
+
+    transform: translateY(-2px);
+
+    box-shadow:
+    0 0 18px rgba(124,58,237,0.6);
+}
+
+/* error text */
+
+#error{
+    color: #ff8fa3 !important;
+}
+
+/* credit */
+
+.image-credit{
+
+    position: absolute;
+
+    bottom: 15px;
+    right: 20px;
+
+    z-index: 3;
+
+    font-size: 11px;
+
+    color: rgba(255,255,255,0.55);
+}
+
+.image-credit a{
+
+    color: rgba(255,255,255,0.75);
+
+    text-decoration: none;
+}
+
+.image-credit a:hover{
+    color: white;
+}
+
+/* mobile responsive */
+
+@media(max-width: 500px){
+
+    .login-container{
+
+        width: 92%;
+
+        padding: 35px 25px;
+    }
+
+    h1{
+        font-size: 23px;
+        letter-spacing: 5px;
+    }
+}
+
+
+/* =========================================
+   CREATE PROFILE PAGE
+========================================= */
+
+/* avatar section */
+
+.avatar-container{
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+.avatar-btn{
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-size: 24px;
+
+    transition: 0.3s;
+}
+
+.avatar-btn:hover{
+
+    transform: scale(1.08);
+
+    background: rgba(255,255,255,0.15);
+}
+
+.selected-avatar{
+
+    border: 2px solid #8b5cf6;
+
+    box-shadow:
+    0 0 12px rgba(139,92,246,0.7);
+}
+
+
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer{
+
+    margin-top:80px;
+
+    background:
+        rgba(255,255,255,0.04);
+
+    border-top:
+        1px solid rgba(255,255,255,0.10);
+
+    backdrop-filter:
+        blur(18px);
+
+    padding:50px 8% 25px;
+
+       width: 100%;
+
+}
+
+.footer-content{
+
+    display:grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap:40px;
+}
+
+.footer-section h3{
+
+    color:white;
+
+    margin-bottom:15px;
+
+    font-size:24px;
+}
+
+.footer-section h4{
+
+    color:white;
+
+    margin-bottom:15px;
+
+    font-size:18px;
+}
+
+.footer-section p{
+
+    color:rgba(255,255,255,0.75);
+
+    line-height:1.8;
+}
+
+.footer-section a{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:rgba(255,255,255,0.7);
+
+    margin-bottom:10px;
+
+    transition:0.3s;
+}
+
+.footer-section a:hover{
+
+    color:#d8b4fe;
+
+    transform:
+        translateX(4px);
+}
+
+.footer-bottom{
+
+    margin-top:35px;
+
+    padding-top:20px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.08);
+
+    text-align:center;
+
+    color:rgba(255,255,255,0.55);
+
+    font-size:14px;
+}
+
+
+

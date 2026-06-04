@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>SleepZone Sleep Calculator</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="sleep-calc.css">
+</head>
+<body class="dashboard-page">
+
+    <!-- Background Overlay -->
+    <div class="background-overlay"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar-custom">
+
+        <!-- Left -->
+        <div class="nav-left">
+            <img src="logo.png" alt="logo" class="logo">
+            <span class="logo-text">SLEEPZONE</span>
+        </div>
+
+        <!-- Center -->
+ <div class="nav-center">
+    <a href="dashboard.html">Home</a>
+    <a href="sleep-log.html">Sleep Log</a>
+    <a href="sleep-history.html">Sleep History</a>
+    <a href="sleep-calc.html">Sleep Calculator</a>
+    <a href="about.html">About</a>
+</div>
+
+        <!-- Right -->
+        <div class="profile-wrapper">
+
+            <div class="profile-icon">
+                ☾
+            </div>
+
+            <!-- Dropdown -->
+            <div class="profile-dropdown">
+                <a href="profile.html">Profile</a>
+                    <a href="index.html">Log Out</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+                        <div class="calculator-card">
+
+    <h2>Sleep Calculator</h2>
+
+    <div class="recommended-box">
+
+        <span>Recommended Sleep For Your Age</span>
+
+        <h3 id="recommendedSleep">
+            Loading...
+        </h3>
+
+        <p id="ageGroup">
+            Determining recommendation...
+        </p>
+
+    </div>
+
+    <div class="toggle-row">
+
+        <button
+            type="button"
+            class="calc-btn active"
+            id="bedBtn"
+        >
+            Go To Bed
+        </button>
+
+        <button
+            type="button"
+            class="calc-btn"
+            id="wakeBtn"
+        >
+            Wake Up
+        </button>
+
+    </div>
+
+    <div class="glass-input-group">
+
+        <label id="timeLabel">
+            Sleep Time
+        </label>
+
+        <input
+            type="time"
+            id="timeInput"
+            class="glass-input"
+        >
+
+    </div>
+
+    <button
+        type="button"
+        class="calculate-btn"
+        id="calculateBtn"
+    >
+        Calculate Recommendations
+    </button>
+
+    <div class="result-box">
+
+        <h4 id="resultTitle">
+            Sleep Recommendations
+        </h4>
+
+        <div id="resultTable">
+
+            <p style="opacity:.7;">
+                Enter a time above and press Calculate.
+            </p>
+
+        </div>
+
+        <div class="sleep-advice">
+
+            <h5>Sleep Advice</h5>
+
+            <p id="adviceText">
+                Sleep recommendations will appear here based on your selected time and age group.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+                        
+
+
+
+    <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-section">
+
+            <h3>SleepZone</h3>
+
+            <p>
+                Helping you build healthier sleep habits,
+                one night at a time.
+            </p>
+
+        </div>
+
+        <div class="footer-section">
+
+            <h4>Quick Links</h4>
+
+            <a href="dashboard.html">Home</a>
+            <a href="sleep-log.html">Sleep Log</a>
+            <a href="sleep-history.html">Sleep History</a>
+              <a href="sleep-calc.html">Sleep Calculator </a>
+            <a href="about.html">About</a>
+
+        </div>
+
+        <div class="footer-section">
+
+            <h4>Contact</h4>
+
+            <a href="#">Contact Us</a>
+            <a href="#">Feedback</a>
+            <a href="#">Reach Us</a>
+
+        </div>
+
+        <div class="footer-section">
+
+            <h4>Follow Us</h4>
+
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">TikTok</a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 SleepZone. All rights reserved.
+    </div>
+
+</footer>
+
+
+    <!-- JS -->
+    <script src="sleep-calc.js"></script>
+
+</body>
+</html>
