@@ -11,12 +11,16 @@ document.getElementById("pageNext").onclick = () => {
     currentPage = 2;
     historyPage.style.display = "none";
     notesPage.style.display = "block";
+    document.getElementById("pageNext").classList.add("tab-active");
+    document.getElementById("pagePrev").classList.remove("tab-active");
 };
 
 document.getElementById("pagePrev").onclick = () => {
     currentPage = 1;
     notesPage.style.display = "none";
     historyPage.style.display = "block";
+    document.getElementById("pagePrev").classList.add("tab-active");
+    document.getElementById("pageNext").classList.remove("tab-active");
 };
 
 
