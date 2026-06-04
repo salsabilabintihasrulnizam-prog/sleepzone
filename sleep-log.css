@@ -773,31 +773,55 @@
    MOBILE RESPONSIVE
 ========================================= */
 
-@media(max-width: 768px){
+@media (max-width: 768px) {
 
-    .navbar-custom{
-        grid-template-columns: 1fr;
-        gap: 15px;
+  .navbar-custom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 12px;
+  }
 
-        padding: 20px;
+  .nav-left {
+    justify-self: unset;
+    order: 1;
+  }
 
-        text-align: center;
-    }
+  .profile-wrapper {
+    justify-self: unset;
+    order: 2;
+  }
 
-    .nav-left,
-    .nav-center,
-    .profile-wrapper{
-        justify-self: center;
-    }
+  .nav-center {
+    order: 3;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 20px;
+  }
+}
 
-    .nav-center{
-        flex-wrap: wrap;
-        justify-content: center;
+@media (max-width: 768px) {
+  .profile-dropdown {
+    background: #1e1a2e;  
+    backdrop-filter: none;
+  }
+}
 
-        gap: 10px;
+@media (max-width: 768px) {
+  .profile-wrapper:hover .profile-dropdown {
+    opacity: 0;
+    visibility: hidden;
+  }
 
-        border-radius: 20px;
-    }
+  .profile-dropdown.dropdown-open {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+  }
 }
 
 
