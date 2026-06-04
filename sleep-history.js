@@ -98,8 +98,10 @@ function renderHistory() {
         return;
     }
 
-    let html = `
+let html = `
+    <div class="table-wrapper">
     <table class="history-table">
+    
         <thead>
             <tr>
                 <th>Date</th>
@@ -124,7 +126,7 @@ function renderHistory() {
         `;
     });
 
-    html += `</tbody></table>`;
+   html += `</tbody></table></div>`;
     container.innerHTML = html;
 }
 
