@@ -1469,35 +1469,22 @@
 
 @media (max-width: 900px) {
 
-  .footer {
-    padding: 30px 5% 20px;
-    margin-top: 50px;
+  .footer-content {
+    grid-template-columns: 1fr;
+    min-width: 0;
   }
 
-  .footer-section h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-
-  .footer-section h4 {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-
-  .footer-section p {
+  .footer-section {
+    min-width: 0;
     font-size: 13px;
   }
 
-  .footer-section a {
-    font-size: 13px;
-    margin-bottom: 7px;
-  }
+  .footer-section h3 { font-size: 16px; }
+  .footer-section h4 { font-size: 14px; }
+  .footer-section p  { font-size: 13px; }
+  .footer-section a  { font-size: 13px; }
 
-  .footer-bottom {
-    font-size: 12px;
-    margin-top: 20px;
-    padding-top: 15px;
-  }
+  .footer-bottom { font-size: 12px; }
 }
 
 
