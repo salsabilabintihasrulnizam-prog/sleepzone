@@ -514,15 +514,10 @@
 .tab-bar {
     display: flex;
     align-items: flex-end;
-   
-    margin-left: calc((100% - 1000px) / 2); 
-    padding-left: 15px;
-
-        width: 100%;
-    max-width: 1000px;  
- 
-    align-items: flex-end;
     gap: 6px;
+    width: 100%;
+    max-width: 1000px;
+    padding-left: 15px;
 }
 
 .tab-btn {
