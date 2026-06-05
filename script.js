@@ -41,17 +41,17 @@ function login(){
 
 let selectedAvatar = "";
 
-function selectAvatar(avatar){
-
+function selectAvatar(avatar) {
     selectedAvatar = avatar;
 
     let buttons = document.querySelectorAll(".avatar-btn");
-
     buttons.forEach(btn => {
         btn.classList.remove("selected-avatar");
     });
 
-    event.target.classList.add("selected-avatar");
+    event.currentTarget
+        ? event.currentTarget.classList.add("selected-avatar")
+        : event.target.closest(".avatar-btn").classList.add("selected-avatar");
 }
 
 function saveProfile(){
