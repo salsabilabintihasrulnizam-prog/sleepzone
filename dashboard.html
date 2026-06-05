@@ -250,10 +250,106 @@
     
 </div>
 
-
-
-
     </section>
+
+
+
+    <!-- =========================================
+     DAILY GOALS
+========================================= -->
+
+<section class="goals-section">
+
+    <div class="goals-header">
+        <h2>Daily Goals</h2>
+        <p>Track your sleep habits for today based on your latest log.</p>
+        <span id="goalsCounter" class="goals-counter">0 / 4 done</span>
+    </div>
+
+    <div class="goals-grid" id="goalsGrid">
+
+        <!-- SLEEP BEFORE MIDNIGHT -->
+        <div class="goal-card" id="goalSleep">
+            <div class="goal-card-top">
+                <span class="goal-label"><img src="sleep.png" class="goal-icon-img"> Sleep Before Midnight</span>
+                <div class="goal-check" id="checkSleep"></div>
+            </div>
+            <div class="clock-row">
+                <svg width="44" height="44" viewBox="0 0 44 44">
+                    <circle cx="22" cy="22" r="20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2.5"/>
+                    <circle cx="22" cy="22" r="20" fill="none" id="clockRingSleep"
+                        stroke="rgba(255,255,255,0.3)" stroke-width="2.5"
+                        stroke-dasharray="125.6" stroke-dashoffset="60"
+                        stroke-linecap="round" transform="rotate(-90 22 22)"/>
+                    <line x1="22" y1="22" x2="22" y2="10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="22" y1="22" x2="30" y2="22" id="clockHandSleep" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="22" cy="22" r="2" fill="white"/>
+                </svg>
+                <div>
+                    <div class="goal-value" id="sleepTimeDisplay">--:-- --</div>
+                    <div class="goal-sub">Target: 9:00 PM – 11:59 PM</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WAKE UP MORNING -->
+        <div class="goal-card" id="goalWake">
+            <div class="goal-card-top">
+<span class="goal-label"><img src="wakeup.png" class="goal-icon-img"> Wake Up In The Morning</span>
+                <div class="goal-check" id="checkWake"></div>
+            </div>
+            <div class="clock-row">
+                <svg width="44" height="44" viewBox="0 0 44 44">
+                    <circle cx="22" cy="22" r="20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2.5"/>
+                    <circle cx="22" cy="22" r="20" fill="none" id="clockRingWake"
+                        stroke="rgba(255,255,255,0.3)" stroke-width="2.5"
+                        stroke-dasharray="125.6" stroke-dashoffset="60"
+                        stroke-linecap="round" transform="rotate(-90 22 22)"/>
+                    <line x1="22" y1="22" x2="22" y2="10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="22" y1="22" x2="30" y2="22" id="clockHandWake" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="22" cy="22" r="2" fill="white"/>
+                </svg>
+                <div>
+                    <div class="goal-value" id="wakeTimeDisplay">--:-- --</div>
+                    <div class="goal-sub">Target: 5:00 AM – 11:59 AM</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLEEP DURATION -->
+        <div class="goal-card goal-card-full" id="goalDuration">
+            <div class="goal-card-top">
+    <span class="goal-label"><img src="zzz.png" class="goal-icon-img"> Sleep Duration</span>
+                <div class="goal-check" id="checkDuration"></div>
+            </div>
+            <div class="goal-hours" id="durationDisplay">--h --m</div>
+            <div class="goal-bar-track">
+                <div class="goal-bar-fill" id="durationBar"></div>
+            </div>
+            <div class="goal-bar-labels">
+                <span>0h</span>
+                <span id="durationWarning"></span>
+                <span>12h</span>
+            </div>
+        </div>
+
+        <!-- EXERCISE -->
+        <div class="goal-card goal-card-full" id="goalExercise">
+            <div class="goal-card-top">
+<span class="goal-label"><img src="exercise.png" class="goal-icon-img"> Exercise Today</span>
+                <div class="goal-check" id="checkExercise"></div>
+            </div>
+            <div class="goal-ex-row" id="exerciseTags">
+                <span class="goal-ex-tag">None</span>
+                <span class="goal-ex-tag">Light</span>
+                <span class="goal-ex-tag">Moderate</span>
+                <span class="goal-ex-tag">Intense</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
 
     <!-- =========================================
      SLEEP AMBIENCE
