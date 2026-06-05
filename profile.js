@@ -9,8 +9,12 @@ let avatar = localStorage.getItem("avatar") || "🌙";
 // display
 document.getElementById("displayName").innerText = name;
 document.getElementById("displayAge").innerText = age;
-document.getElementById("profileAvatar").innerText = avatar;
-
+const avatarEl = document.getElementById("profileAvatar");
+if (avatar && avatar.endsWith(".png")) {
+    avatarEl.innerHTML = `<img src="${avatar}" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">`;
+} else {
+    avatarEl.innerText = avatar;
+}
 // input prefill
 document.getElementById("nameInput").value = name;
 document.getElementById("ageInput").value = age;
