@@ -1057,6 +1057,240 @@
   }
 }
 
+
+/* =========================================
+   DAILY GOALS
+========================================= */
+
+.goals-section {
+    width:     90%;
+    max-width: 1400px;
+    margin:    80px auto;
+    position:  relative;
+    z-index:   2;
+}
+
+.goals-header {
+    text-align:    center;
+    margin-bottom: 40px;
+}
+
+.goals-header h2 {
+    font-size:   42px;
+    font-weight: 700;
+    color:       white;
+    margin-bottom: 12px;
+}
+
+.goals-header p {
+    max-width:  700px;
+    margin:     auto;
+    color:      rgba(255,255,255,0.75);
+    font-size:  16px;
+    line-height: 1.8;
+}
+
+.goals-grid {
+    display:               grid;
+    grid-template-columns: 1fr 1fr;
+    gap:                   24px;
+}
+
+.goal-card {
+    background:      rgba(255,255,255,0.06);
+    border:          1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(18px);
+    border-radius:   28px;
+    padding:         28px;
+    box-shadow:      0 10px 40px rgba(0,0,0,0.35);
+    transition:      0.35s ease;
+}
+
+.goal-card.done {
+    border-color: rgba(34,197,94,0.5);
+    background:   rgba(34,197,94,0.08);
+}
+
+.goal-card:hover {
+    transform:  translateY(-4px);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.45), 0 0 25px rgba(124,58,237,0.2);
+}
+
+.goal-card-full {
+    grid-column: span 2;
+}
+
+.goal-card-top {
+    display:         flex;
+    justify-content: space-between;
+    align-items:     center;
+    margin-bottom:   16px;
+}
+
+.goal-label {
+    font-size:   15px;
+    font-weight: 600;
+    color:       rgba(255,255,255,0.88);
+}
+
+.goal-check {
+    width:           22px;
+    height:          22px;
+    border-radius:   50%;
+    border:          1.5px solid rgba(255,255,255,0.3);
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+    font-size:       13px;
+    color:           transparent;
+}
+
+.goal-check.done {
+    background:   #22c55e;
+    border-color: #22c55e;
+    color:        white;
+}
+
+.clock-row {
+    display:     flex;
+    align-items: center;
+    gap:         14px;
+}
+
+.goal-value {
+    font-size:   20px;
+    font-weight: 600;
+    color:       white;
+}
+
+.goal-card.done .goal-value {
+    color: #4ade80;
+}
+
+.goal-sub {
+    font-size:  12px;
+    color:      rgba(255,255,255,0.5);
+    margin-top: 4px;
+}
+
+.goal-card.done .goal-sub {
+    color: rgba(74,222,128,0.7);
+}
+
+/* DURATION BAR */
+
+.goal-hours {
+    font-size:     28px;
+    font-weight:   700;
+    color:         white;
+    margin-bottom: 12px;
+}
+
+.goal-bar-track {
+    width:         100%;
+    height:        10px;
+    background:    rgba(255,255,255,0.1);
+    border-radius: 999px;
+    overflow:      hidden;
+    margin-bottom: 8px;
+}
+
+.goal-bar-fill {
+    height:        100%;
+    border-radius: 999px;
+    transition:    width 0.5s ease;
+    background:    #22c55e;
+}
+
+.goal-bar-labels {
+    display:         flex;
+    justify-content: space-between;
+    font-size:       11px;
+    color:           rgba(255,255,255,0.45);
+}
+
+/* EXERCISE TAGS */
+
+.goal-ex-row {
+    display:   flex;
+    gap:       10px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+}
+
+.goal-ex-tag {
+    padding:       6px 16px;
+    border-radius: 999px;
+    font-size:     13px;
+    border:        1px solid rgba(255,255,255,0.15);
+    color:         rgba(255,255,255,0.6);
+}
+
+.goal-ex-tag.active {
+    background:   rgba(34,197,94,0.18);
+    color:        #4ade80;
+    border-color: rgba(34,197,94,0.4);
+}
+
+@media (max-width: 900px) {
+    .goals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .goal-card-full {
+        grid-column: span 1;
+    }
+
+    .goals-header h2 {
+        font-size: 32px;
+    }
+}
+
+.goals-counter {
+    display:         inline-block;
+    margin-top:      10px;
+    padding:         5px 16px;
+    border-radius:   999px;
+    font-size:       14px;
+    background:      rgba(34,197,94,0.15);
+    color:           #4ade80;
+    border:          1px solid rgba(34,197,94,0.3);
+}
+
+
+.goal-icon-img {
+    width:          22px;
+    height:         22px;
+    object-fit:     contain;
+    vertical-align: middle;
+    margin-right:   6px;
+}
+
+
+@media (max-width: 900px) {
+
+  .goals-header h2 {
+    font-size: 32px;
+  }
+
+  .goals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .goal-card-full {
+    grid-column: span 1;
+  }
+
+  .goal-ex-row {
+    gap: 8px;
+  }
+
+  .goal-ex-tag {
+    font-size: 12px;
+    padding:   5px 12px;
+  }
+}
+
 /* =========================================
    AMBIENCE SECTION
 ========================================= */
